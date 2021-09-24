@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#header{
+    display: block;
+}
+#linksTop{
+    width: 100%;
+    height: 64px;
+    background-color: black;
+};
+.nav{
+    width: 100%;
+    height: 64px;
+    background-color: #272827;
+};
+.nav ul{
+    display: flex;
+    align-items: center;
+};
+.nav .listLinks{
+    display: inline-block;
+    vertical-align: middle;
+};
+.nav .listLinks a{
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    height: 64px;
+};
