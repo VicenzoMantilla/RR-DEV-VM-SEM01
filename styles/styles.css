@@ -2,6 +2,10 @@
     font-family: abcsan;
     src: url(/fonts/abcsans-regular.otf);
 }
+@font-face {
+    font-family: abcsanbold;
+    src: url(/fonts/abcsans-bold.otf);
+}
 *{
     margin: 0;
     padding: 0;
@@ -11,6 +15,7 @@
 }
 .buttonsContainer{
     display: flex;
+    justify-content: flex-end;
     width: 100%;
     height: 64px;
     background-color: black;
@@ -35,6 +40,7 @@
     height: 64px;
     background-color: black;
     color: white;
+    border: 0;
     border-left: 1px solid gray;
 }
 .location img{
@@ -45,6 +51,7 @@
     width: 31px;
     height: 64px;
     padding: 0px 16px;
+    border: 0;
     border-left: 1px solid gray;
 }
 .logIn{
@@ -52,12 +59,15 @@
     color: white;
     width: 74px;
     padding: 0px 16px 0px 16px;
+    border: 0;
     border-left: 1px solid gray;
 }
 .rightListButton{
-    width: 32px;
+    width: 64px;
     padding: 16px 0px;
+    border: 0;
     border-left: 1px solid gray;
+    border-bottom: 0.5px solid rgb(26, 26, 26);
     background-color: #272827;
 }
 .rightListButton img{
@@ -68,12 +78,12 @@
     height: 64px;
     background-color: black;
 }
-#navbar{
+.navbar{
     width: 100%;
     height: 64px;
     background-color: #272827;
 }
-#navbar ul{
+.navbar ul{
     list-style: none;
     align-items: center;
     background-color: #272827;
@@ -81,14 +91,20 @@
 .listLinks{
     display: inline-block;
 }
-#navbar a{
+.navbar a{
     height: 64px;
     text-decoration: none;
     display: flex;
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
+    font-family: abcsan;
     color: white;
+}
+.navbar a:hover{
+    transition: 1ms;
+    background-color: #1F2020;
+    color: #00CDFD;
 }
 #main{
     display: block;
@@ -163,6 +179,29 @@
     padding: 8px 8px;
     vertical-align: middle;
 }
+.mainTitle{
+    border-right: 1px solid #E6E6E6;
+    border-left: 1px solid #E6E6E6;
+}
+.mainTitle h1{
+    height: 144px;
+    margin-bottom: 16px;
+    padding-left: 10px;
+    font-family: abcsanbold;
+    font-size: 35px;
+    color: black;
+}
+.mainTitle span{
+    display: block;
+    height: 20px;
+    padding-left: 10px;
+    font-family: abcsan;
+    font-size: 12px;
+    color: #3F3F3F;
+}
+.firstImage img{
+    width: 831px;
+}
 #entireBody{
     display: flex;
     flex-wrap: wrap;
@@ -176,11 +215,80 @@
     width: 717.31px;
     height: 478.2px;
 }
+.imgSubTitle{
+    height: 24px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+    padding: 0px 16px;
+    font-family:abcsan;
+    font-size: 12px;
+    color: #646464;
+}
 .box2{
-    height: 124px;
+    display: block;
+    height: 90px;
+    padding: 16px 16px;
+    font-family: abcsan;
+    font-weight: 600;
+    border: 1px solid #E6E6E6;
+}
+.boxLinks{
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.linkRoundBorder{
+    width: 268px;
+    height: 24px;
+    margin-right: 16px;
+    padding: 8px 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: .9rem;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    background-color: #F2F2F2;
+}
+.copyLink{
+    display: inline-flex;
+    align-items: center;
+    width: 158.66px;
+    height: 48px;
+    margin-right: 8px;
+    padding: 10px 24px 8px 24px;
+    font-family: abcsan;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    border: 0;
+    border-radius: 4px;
+    background-color: #00CDFD;
+}
+.shareButton{
+    width: 158.66px;
+    height: 48px;
+    margin-right: 8px;
+    padding: 10px 24px 8px 24px;
+    font-family: abcsan;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    border: 1px solid #00CDFD;
+    background-color: white;
+}
+.box2title{
+    height: 26px;
+    margin-bottom: 16px;
 }
 .newsBody{
     padding: 48px 16px 32px 16px;
+}
+.bodyContainer{
+    border-right: 1px solid #E6E6E6;
+    border-left: 1px solid #E6E6E6;
 }
 .bodyContent{
     margin: 16px 0px;
@@ -189,30 +297,70 @@
     line-height: 1.5rem;
 }
 .newsBody .box3{
-    width: 604px;
-    height: 48px;
-    border: 1px solid gray;
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 638px;
+    height: 20px;
+    border: 1px solid #E6E6E6;
+    padding: 16px 16px;
     margin-bottom: 24px;
+    text-align:left;
 }
 .newsBody .box3 a{
     width: 574.47px;
     height: 46px;
-    font-size: 16px;
+    font-family: abcsan;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #0067D5;
 }
 .newsBody img{
     width: 702px;
     height: 468.27px;
 }
-.boxContainer4{
-    padding: 48px 16px 32px 16px;
-    border: 1px solid gray;
+.newsBody video{
+    width: 800px;
 }
-.box4{
+.boxContainer4{
+    width: 638px;
     height: 132px;
-    width: 604px;
-    padding: 16px;
     margin-bottom: 24px;
+    padding: 16px 16px;
+    border: 1px solid #E6E6E6;
+}
+.box4 h2{
+    margin-bottom: 8px;
+    font-family: abcsanbold;
+    font-weight: 900;
+    font-size: 15px;
+    color: black;
+}
+.box4 ul{
+    display: block;
+    list-style: none;
+    position: relative;
+}
+.box4links{
+    display: flex;
+    height: 28px;
+    margin-bottom: 8px;
+    padding-left: 24px;
+}
+.box4links span{
+    position: relative;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    background-color: #00CDFD;
+}
+.box4links a{
+    padding-left: 10px;
+    font-family: abcsanbold;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    text-decoration: underline;
+    color: #1758CC;
 }
 #rightBodySide{
     width: 256.828px;
@@ -221,12 +369,20 @@
 }
 #lowSectionContainer{
     display: flex;
-    margin: 0 98.5px;
+    padding-left: 32px;
 }
 .rightSideContent{
     width: 256.828px;
 }
 /*FORM*/
+.formContainer h3{
+    width: 638px;
+    height: 64px;
+    margin-bottom: 16px;
+    font-family: abcsanbold;
+    font-size: 23px;
+
+}
 .label{
     display: block;
     margin-bottom: 8px;
@@ -290,10 +446,59 @@
     font-family: abcsan;
     font-size: 0.75rem;
 }
+.lowTexts a{
+    color: #4F00EE;
+}
 /*left side Images*/
 .containerSide{
     display: flex;
     flex-direction: column;
+    margin-top: 28px;
+}
+.containerSide h4{
+    height: 32px;
+    margin-bottom: 16px;
+    font-family: abcsanbold;
+    font-size: 25px;
+    color: black;
+}
+.containerSide img{
+    width: 270px;
+    margin-bottom: 8px;
+}
+.topNew{
+    display: block;
+}
+.sideTitleNews{
+    margin-bottom: 16px;
+}
+.topNew a{
+    height: 64px;
+    font-family: abcsanbold;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.subTitles{
+    margin-bottom: 16px;
+}
+.subTitles h4{
+    height: 24px;
+    font-family: abcsanbold;
+    font-size: 18px;
+    color: black;
+}
+.subLowContainer{
+    height: 27px;
+}
+.subLowContainer a{
+    font-family: abcsanbold;
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+.subLowContainer a:hover{
+    text-decoration: underline;
 }
 .sideNews{
     display: flex;
@@ -301,13 +506,18 @@
     height: 96px;
     margin-bottom: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #E6E6E6;
 
 }
 .sideNews a{
     display: inline-flex;
     font-family: abcsan;
     text-decoration: none;
+    color: black;
+}
+.sideNews a:hover{
+    transition: 1ms;
+    color: #0058CC;
 }
 .minImages{
     width: 81.844px;
@@ -319,17 +529,39 @@
     margin-left: 5px;
 }
 /*topStories*/
+.containerStories .topStoriesTitle{
+    height: 32px;
+    margin-bottom: 16px;
+    font-family: abcsanbold;
+    font-size: 22px;
+    color: black;
+}
 .listStories{
     width: 272.828px;
     height: 72px;
     margin-bottom: 16px;
     padding-bottom: 16px;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #E6E6E6;
+    list-style: none;
 }
 .listStories a{
+    color: black;
     text-decoration: none;
 }
-.h5{
+.listStories a:hover{
+    transition: 1ms;
+    color: #1758CC;
+}
+.storieContainerText .analysis{
+    height: 24px;
+    padding: 0px 8px;
+    margin: 8px 0px;
+    font-family: abcsan;
+    font-size: 12px;
+    background-color: black;
+    color: white;
+}
+.storieContainerText .h5{
     font-family: abcsan;
     font-size: 15px;
     line-height: 1.5rem;
@@ -343,13 +575,30 @@
     display: flex;
     flex-direction: column;
 }
+.listContainerPopular ol{
+    list-style: none;
+    position: relative;
+}
+.listContainerPopular h5{
+    height: 32px;
+    margin-bottom: 8px;
+    font-family: abcsanbold;
+    font-size: 25px;
+}
 .popularList{
+    display: inline-flex;
     width: 248.828px;
     height: 120px;
     margin-bottom: 16px;
     padding-bottom: 16px;
     padding-left: 24px;
     border-bottom: 1px solid gray;
+}
+.popularList span{
+    font-weight: bolder;
+    position: relative;
+    right: 27px;
+    color: blue;
 }
 .olContent{
     display: flex;
@@ -363,10 +612,18 @@
     height: 54.719px;
 }
 .h6{
-    font-family: abcsan;
-    font-size: 15px;
-    line-height: 1.5rem;
+    font-family: abcsanbold;
+    font-size: 14px;
+    line-height: 24px;
     font-weight: 600;
+}
+.olContent a{
+    color: black;
+    text-decoration: none;
+}
+.olContent a:hover{
+    transition: 1ms;
+    color: #0058CC;
 }
 /*SOCIAL MEDIA FORM ICONS*/
 .socialIcons{
@@ -417,7 +674,7 @@
     border: 1px solid #e6e6e6;
     text-decoration: none;
     color: #4F58CF;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-transform: uppercase;
     font-weight: 600;
     font-size: .75rem;
@@ -439,6 +696,23 @@
     margin-left: 32px;
 }
 /*grid images*/
+.lowTitleTop{
+    display: flex;
+    position: relative;
+}
+.lowTitleTop span{
+    width: 6px;
+    height: 40px;
+    left: 0;
+    background-color: #00CDFD;
+}
+.lowTitleTop h2{
+    height: 40px;
+    margin-bottom: 16px;
+    padding-left: 5px;
+    font-family: abcsanbold;
+    font-size: 40px;
+}
 .gridContainer{
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
@@ -455,6 +729,23 @@
 /*LOW RIGHT LIST ITEMS*/
 .lowRightSide{
     display: block;
+    position: relative;
+}
+.justInText{
+    display: flex;
+    position: relative;
+}
+.justInText span{
+    width: 6px;
+    height: 40px;
+    left: 0;
+    background-color: #00CDFD;
+}
+.justInText h4{
+    height: 40px;
+    font-family: abcsanbold;
+    font-size: 30px;
+    padding-left: 5px;
 }
 .rightItemList{
     height: 72px;
@@ -467,19 +758,49 @@
     height: 48px;
     text-align:left;
 }
-.linkContainers .h4{
+.linkContainers h4{
     height: 48px;
-    font-family: abcsan;
-    font-size: 1rem;
+    margin-bottom: 8px;
+    font-family: abcsanbold;
+    font-size: 15px;
     text-align: left;
 }
-.linkContainers .h4 a{
+.linkContainers h4 a{
+    color: black;
     text-decoration: none;
+}
+.linkContainers h4 a:hover{
+    transition: 1ms;
+    color: #0058CC;
 }
 .timePosted{
     height: 24px;
     margin-top: 10px;
     color: #878797;
+}
+.moreJustIn{
+    height: 27px;
+    margin-top: 16px;
+    text-align: end;
+}
+.moreJustIn a{
+    font-family: abcsan;
+    font-size: 16px;
+    text-decoration: none;
+    color:#0058CC;
+}
+.backTop{
+    width: 100%;
+    height: 27px;
+    margin-top: 16px;
+    text-align: end;
+}
+.backTop a{
+    height: 27px;
+    font-family: abcsanbold;
+    font-size: 14px;
+    text-decoration: none;
+    color:#7C6464;
 }
 /*FOOTER*/
 #footer{
@@ -599,4 +920,15 @@
     height: 32px;
     border-radius: 50%;
     box-shadow: 2px inset gray;
+}
+/*firstWeek*/
+.infobae{
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+}
+.infobae img{
+    width: 600px;
+    height: 350px;
+    padding-right: 300px;
 }
